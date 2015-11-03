@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ambiente_MSCRM" Class="CRMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=crmdesarrollo;Initial Catalog=Ambiente_MSCRM;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Ambiente_MSCRMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.new_estadosExtensionBase" Member="DBEstados">
+    <Type Name="DBEstados">
+      <Column Name="new_estadosId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="new_estado" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Estado_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Descripcion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="new_Servicios" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.amb_solicitanteExtensionBase" Member="DBSolicitantes">
+    <Type Name="DBSolicitantes">
+      <Column Name="amb_solicitanteId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="amb_no_documento" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="amb_tipo_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_nombre" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_NumerodeTelefono1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="new_NumerodeTelefono2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="new_CorreoElectrnico1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_CorreoElectrnico2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Usuario_Pagina" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.new_Solicitud_en_lineaBase" Member="new_Solicitud_en_lineaBases">
+    <Type Name="new_Solicitud_en_lineaBase">
+      <Column Name="new_Solicitud_en_lineaId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreatedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerIdType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OwningBusinessUnit" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="statecode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="statuscode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="ImportSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverriddenCreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeZoneRuleVersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UTCConversionTimeZoneCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="new_Solicitud_en_lineaBase_DBSolicitudEnLineas" Member="DBSolicitudEnLineas" ThisKey="new_Solicitud_en_lineaId" OtherKey="new_Solicitud_en_lineaId" Type="DBSolicitudEnLineas" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnnotationBase" Member="AnnotationBases">
+    <Type Name="AnnotationBase">
+      <Column Name="AnnotationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ObjectTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ObjectId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwningBusinessUnit" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IsDocument" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NoteText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MimeType" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LangId" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="DocumentBody" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FileSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsPrivate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="StepId" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="OverriddenCreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImportSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwnerIdType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.new_new_servicio_new_estadosBase" Member="DBServicioEstados">
+    <Type Name="DBServicioEstados">
+      <Column Name="new_new_servicio_new_estadosId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VersionNumber" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="new_servicioid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="new_estadosid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.new_servicioExtensionBase" Member="DBServicios">
+    <Type Name="DBServicios">
+      <Column Name="new_servicioId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="new_servicio" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Servicio_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_descripcion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.new_Solicitud_en_lineaExtensionBase" Member="DBSolicitudEnLineas">
+    <Type Name="DBSolicitudEnLineas">
+      <Column Name="new_Solicitud_en_lineaId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="new_Solcitud_id" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_SolicitanteId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Institucion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Direccion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Telefono" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Correo_Electronico" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Cantidad_Participantes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_ServiciosId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_EstadoId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Nota" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="new_Solicitud_en_lineaBase_DBSolicitudEnLineas" Member="new_Solicitud_en_lineaBase" ThisKey="new_Solicitud_en_lineaId" OtherKey="new_Solicitud_en_lineaId" Type="new_Solicitud_en_lineaBase" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.amb_viceministerio_recursos_forestalesExtensionBase" Member="DBViceministerioRecursosForestales">
+    <Type Name="DBViceministerioRecursosForestales">
+      <Column Name="amb_viceministerio_recursos_forestalesId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="amb_solicitante" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="amb_cheque_numero" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_telefono" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_concepto" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_monto" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amb_amb_tipo_madera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_pies_tablar" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amb_cantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amb_Observaciones" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="amb_No_RNCId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="amb_estatus_solicitud" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_TipodeMadera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_tipo_madera_final" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Puerto" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Pais_de_Procedencia" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Suplidor" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Barco_Vapor" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Siglas" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Numero_Solicitud" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Monto_USD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="new_DireccionenTerritorioNacional" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="new_TelefonoMovil" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Nacionalidad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_NoCeduladeIdentidad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_NodePasaporte" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Direccion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_TelefonoFijo1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_TelefonoMovil1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_CorreoElectronico1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_EspecificacionesAutorizacionAmbiental" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_NombredelTitular" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Provincia" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Municipio" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Seccion" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_ParajeCiudad" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Longitud" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Latitud" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Tipoproductoexportar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Nombrecomun" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_NombreCientifico" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_PuertoEmbarque" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_FechaProgramaInicioCarga" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="new_FechaestimadafinalizacionEmbarque" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="new_NombredelaPersonaRepresentante" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_ConceptoEspecificacion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Otroespecifique" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Concepto_RF" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBViceministerioRecursosForestales" Member="amb_viceministerio_recursos_forestalesBase" ThisKey="amb_viceministerio_recursos_forestalesId" OtherKey="amb_viceministerio_recursos_forestalesId" Type="amb_viceministerio_recursos_forestalesBase" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.amb_pago_tematicoExtensionBase" Member="DBPagoTematicos">
+    <Type Name="DBPagoTematico">
+      <Column Name="amb_pago_tematicoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="amb_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_concepto" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_cheque_no" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_area_tematica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_concepto_suelos_aguas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_pagos_por_permiso" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amb_monto" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amb_tipo_madera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_tipo_madera_ap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_numero_parcela" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_numero_dc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_cantidad_plantas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_cantidad_animales" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_tipo_exp_imp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_descripcion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_cantidad_especie" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_arma_adicional" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="amb_especie_animal" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_cantidad_d_animales" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_no_documento_Id" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="amb_solicitud_por" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_observaciones" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="amb_codigo_tarifa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_recursos_costeros_marinosId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="amb_pies_tablar" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amb_telefono" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_enviar_factura" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="amb_SuelosyAguasId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="amb_RecursosForestalesId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="amb_concepto_apb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_tipo_permiso_ap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_no_cites_ap" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_especie_nombre_comun" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_tipo_apb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_tipo_madera_apb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_cantidad_plantas_apb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_apb_tipo_madera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_amb_cantidad_animales_apb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_cantidad_especie_apb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_concepto_vsuelos_aguas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_tipo_madera_vsuelosAguas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_cantidad_importar_sue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amb_pais_procedencia" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_componentes_quimcios" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="amb_tipo_madera_vrecursosforestales" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_ViceministerioAreaProtegidasId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="amb_tipo_permiso_biodiversidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amb_nombre_comun" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="amb_nombre_cientifico" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="amb_descripcion_arma" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="amb_descripcion_especie" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="amb_Cantidad_float_m3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="new_Company" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_NoSolicitud" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="new_Pagado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_NumerodeRecibo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="new_Recibo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="new_TipodePermisorf" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Numero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_NombreEmbarcacion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_PuertoEmbarque" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_PuertoDesembarque" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_FechaestimadafinalizacionEmbarque" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="new_FechaProgramaInicioCarga" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="new_RNCEmpresa" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Empresaendorsada" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_Titulodelainvestigacion" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="new_Lugardelainvestigacion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="new_Tipo_de_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Comunicacion_de_solicitud" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_Copia_del_titulo_propiedad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_Copia_plano_catastral" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_Certificacion_del_inmueble" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_Copia_del_cheque" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_Expediente_Completo_Anexo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_IncluirexpedienteenRecursosForestales" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="new_Concepto_RF" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_CosterosyMarinosId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_PagosCosterosyMarinosId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBPagoTematico" Member="amb_viceministerio_recursos_forestalesBase" ThisKey="amb_RecursosForestalesId" OtherKey="amb_viceministerio_recursos_forestalesId" Type="amb_viceministerio_recursos_forestalesBase" IsForeignKey="true" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBPagoTematico1" Member="amb_viceministerio_recursos_forestalesBase1" ThisKey="new_CosterosyMarinosId" OtherKey="amb_viceministerio_recursos_forestalesId" Type="amb_viceministerio_recursos_forestalesBase" IsForeignKey="true" />
+      <Association Name="amb_pago_tematicoBase_DBPagoTematico" Member="amb_pago_tematicoBase" ThisKey="amb_pago_tematicoId" OtherKey="amb_pago_tematicoId" Type="amb_pago_tematicoBase" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.new_detalleexportacionimportacionExtensionBase" Member="DBDetalleExportacionImportacions">
+    <Type Name="DBDetalleExportacionImportacion">
+      <Column Name="new_detalleexportacionimportacionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="new_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Descripcion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Especie" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_ProyectoAreaProtegida" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_EspecieLookup" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_NoCITES" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="new_Origen" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Apendice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Proposito" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Permiso_no" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Paisdeorigen" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="new_Totalexportado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Paisdelaultimaexportacion" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_CertificadoNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Fechacertificado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="new_NoEstablecimiento" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="new_Cantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="new_Unidaddemedida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Pago_tematico" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_M3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="new_Piestablar" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="new_RecursosForestales" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Planoperativo" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_ComponenteNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_RodalNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Superficieamanejar" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="new_Arboles" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_ViceministerioSuelosyAguasId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBDetalleExportacionImportacion" Member="amb_viceministerio_recursos_forestalesBase" ThisKey="new_RecursosForestales" OtherKey="amb_viceministerio_recursos_forestalesId" Type="amb_viceministerio_recursos_forestalesBase" IsForeignKey="true" />
+      <Association Name="amb_pago_tematicoBase_DBDetalleExportacionImportacion" Member="amb_pago_tematicoBase" ThisKey="new_Pago_tematico" OtherKey="amb_pago_tematicoId" Type="amb_pago_tematicoBase" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.amb_especieExtensionBase" Member="DBEspecies">
+    <Type Name="DBEspecie">
+      <Column Name="amb_especieId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="amb_nombre_comun" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_nombre_cientifico" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amb_permiso_exportacion_Id" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="amb_permiso_importacion_Id" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_familia" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="new_Familia_especie" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="new_Tipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_Tarifa" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.amb_viceministerio_recursos_forestalesBase" Member="amb_viceministerio_recursos_forestalesBases">
+    <Type Name="amb_viceministerio_recursos_forestalesBase">
+      <Column Name="amb_viceministerio_recursos_forestalesId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreatedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerIdType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OwningBusinessUnit" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="statecode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="statuscode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ImportSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverriddenCreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeZoneRuleVersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UTCConversionTimeZoneCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBViceministerioRecursosForestales" Member="DBViceministerioRecursosForestales" ThisKey="amb_viceministerio_recursos_forestalesId" OtherKey="amb_viceministerio_recursos_forestalesId" Type="DBViceministerioRecursosForestales" Cardinality="One" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBPagoTematico" Member="DBPagoTematicos" ThisKey="amb_viceministerio_recursos_forestalesId" OtherKey="amb_RecursosForestalesId" Type="DBPagoTematico" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBPagoTematico1" Member="DBPagoTematicos1" ThisKey="amb_viceministerio_recursos_forestalesId" OtherKey="new_CosterosyMarinosId" Type="DBPagoTematico" />
+      <Association Name="amb_viceministerio_recursos_forestalesBase_DBDetalleExportacionImportacion" Member="DBDetalleExportacionImportacions" ThisKey="amb_viceministerio_recursos_forestalesId" OtherKey="new_RecursosForestales" Type="DBDetalleExportacionImportacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.amb_pago_tematicoBase" Member="amb_pago_tematicoBases">
+    <Type Name="amb_pago_tematicoBase">
+      <Column Name="amb_pago_tematicoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreatedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedOnBehalfBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerIdType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OwningBusinessUnit" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="statecode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="statuscode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="ImportSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverriddenCreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeZoneRuleVersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UTCConversionTimeZoneCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="amb_pago_tematicoBase_DBPagoTematico" Member="DBPagoTematico" ThisKey="amb_pago_tematicoId" OtherKey="amb_pago_tematicoId" Type="DBPagoTematico" Cardinality="One" />
+      <Association Name="amb_pago_tematicoBase_DBDetalleExportacionImportacion" Member="DBDetalleExportacionImportacions" ThisKey="amb_pago_tematicoId" OtherKey="new_Pago_tematico" Type="DBDetalleExportacionImportacion" />
+    </Type>
+  </Table>
+</Database>

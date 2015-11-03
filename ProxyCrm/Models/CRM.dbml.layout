@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16, 30.375" name="CRM">
+  <DataContextMoniker Name="/CRMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9162db49-5dff-43f3-a4ac-c1afd5999571" absoluteBounds="5.5, 5.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CRMDataContext/DBEstados" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bae1b0c1-b2ae-41f5-bbe8-5a8a5920dce5" absoluteBounds="5.515, 5.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d8f11f9b-0a9c-46a0-9bb6-f42007af1e24" absoluteBounds="4.5, 1.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CRMDataContext/DBSolicitantes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4afb8250-acef-44ce-b08d-33a1c7fa45ec" absoluteBounds="4.515, 1.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="796866c9-cdd8-4da0-835f-a716627a05f5" absoluteBounds="1, 8.125, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/CRMDataContext/new_Solicitud_en_lineaBase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd481ac1-d74e-4c65-a79d-9b9ba0d12426" absoluteBounds="1.0150000000000001, 8.585, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b606415-ab0f-4e39-b8cf-974403cb3a62" absoluteBounds="5.625, 7.5, 2, 5.6169254557291648">
+      <DataClassMoniker Name="/CRMDataContext/AnnotationBase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81fb4bdf-8a76-463c-bc5f-059831cc4ba5" absoluteBounds="5.64, 7.96, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ad5b265-7521-490e-82c0-fbe3d7db3e4a" absoluteBounds="7.25, 1.75, 2.5, 1.5785953776041666">
+      <DataClassMoniker Name="/CRMDataContext/DBServicioEstados" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f392bd79-d83c-4405-89e3-f6f73fb1006a" absoluteBounds="7.2650000000000006, 2.2100000000000009, 2.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d510bd21-0da4-4403-9ac7-d94ebca29969" absoluteBounds="1.25, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CRMDataContext/DBServicios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aea9cbcc-bf84-454d-b589-4c0db82cf07d" absoluteBounds="1.2650000000000001, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7f45377-26f4-4d55-88ad-90c45c4b0632" absoluteBounds="1, 3.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CRMDataContext/DBSolicitudEnLineas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f55c88b-c76b-446a-a0d6-33c259c4ff2b" absoluteBounds="1.0149999999999997, 3.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2 : 8.125); (2 : 6.29970540364583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CRMDataContext/new_Solicitud_en_lineaBase/new_Solicitud_en_lineaBase_DBSolicitudEnLineas" />
+      <nodes>
+        <classShapeMoniker Id="796866c9-cdd8-4da0-835f-a716627a05f5" />
+        <classShapeMoniker Id="e7f45377-26f4-4d55-88ad-90c45c4b0632" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e012fc59-117c-4b47-a5b9-2abde6789b0e" absoluteBounds="0.875, 12.375, 2.75, 10.0398583984375">
+      <DataClassMoniker Name="/CRMDataContext/DBViceministerioRecursosForestales" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92a30b75-bcda-46a9-b689-1816a0200f61" absoluteBounds="0.89, 12.835, 2.7199999999999998, 9.4798583984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06166390-3320-4c51-9c46-fb12d37ce432" absoluteBounds="4.25, 13.75, 2, 16.385805664062502">
+      <DataClassMoniker Name="/CRMDataContext/DBPagoTematico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff098260-d2d2-4b19-939e-f1eb315fdcea" absoluteBounds="4.265, 14.21, 1.9700000000000002, 15.8258056640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="831cf88c-db72-4fd6-b3f7-58f51b6d1710" absoluteBounds="7, 14.5, 2, 6.5784326171875">
+      <DataClassMoniker Name="/CRMDataContext/DBDetalleExportacionImportacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2399c493-0e76-48c4-86a0-4f4a655fcf63" absoluteBounds="7.015, 14.96, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95035214-a41d-46a1-a307-e0dc11ef31b9" absoluteBounds="10, 10.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CRMDataContext/DBEspecie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e4d0aca-e705-4c6a-a5ca-cd58d8b368d1" absoluteBounds="10.015, 10.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01a71481-cadc-49fc-8799-49c458fcbb07" absoluteBounds="11.5, 13.625, 2, 4.2708154296875">
+      <DataClassMoniker Name="/CRMDataContext/amb_viceministerio_recursos_forestalesBase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd6b6354-5eae-41ec-bc6c-1e154b3500c6" absoluteBounds="11.515, 14.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 13.65625); (3.625 : 13.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CRMDataContext/amb_viceministerio_recursos_forestalesBase/amb_viceministerio_recursos_forestalesBase_DBViceministerioRecursosForestales" />
+      <nodes>
+        <classShapeMoniker Id="01a71481-cadc-49fc-8799-49c458fcbb07" />
+        <classShapeMoniker Id="e012fc59-117c-4b47-a5b9-2abde6789b0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 14.09375); (6.25 : 14.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CRMDataContext/amb_viceministerio_recursos_forestalesBase/amb_viceministerio_recursos_forestalesBase_DBPagoTematico" />
+      <nodes>
+        <classShapeMoniker Id="01a71481-cadc-49fc-8799-49c458fcbb07" />
+        <classShapeMoniker Id="06166390-3320-4c51-9c46-fb12d37ce432" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 14.328125); (6.25 : 14.328125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CRMDataContext/amb_viceministerio_recursos_forestalesBase/amb_viceministerio_recursos_forestalesBase_DBPagoTematico1" />
+      <nodes>
+        <classShapeMoniker Id="01a71481-cadc-49fc-8799-49c458fcbb07" />
+        <classShapeMoniker Id="06166390-3320-4c51-9c46-fb12d37ce432" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 16.1979077148438); (9 : 16.1979077148438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CRMDataContext/amb_viceministerio_recursos_forestalesBase/amb_viceministerio_recursos_forestalesBase_DBDetalleExportacionImportacion" />
+      <nodes>
+        <classShapeMoniker Id="01a71481-cadc-49fc-8799-49c458fcbb07" />
+        <classShapeMoniker Id="831cf88c-db72-4fd6-b3f7-58f51b6d1710" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f5df4e8e-a031-449e-84f3-0a80248c7da7" absoluteBounds="13.75, 18.125, 2, 4.2708154296875">
+      <DataClassMoniker Name="/CRMDataContext/amb_pago_tematicoBase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdef7216-362c-4ce3-9a37-eca489590625" absoluteBounds="13.765, 18.585, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.75 : 21.7683740234375); (6.25 : 21.7683740234375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CRMDataContext/amb_pago_tematicoBase/amb_pago_tematicoBase_DBPagoTematico" />
+      <nodes>
+        <classShapeMoniker Id="f5df4e8e-a031-449e-84f3-0a80248c7da7" />
+        <classShapeMoniker Id="06166390-3320-4c51-9c46-fb12d37ce432" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 19.6017163085938); (9 : 19.6017163085938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CRMDataContext/amb_pago_tematicoBase/amb_pago_tematicoBase_DBDetalleExportacionImportacion" />
+      <nodes>
+        <classShapeMoniker Id="f5df4e8e-a031-449e-84f3-0a80248c7da7" />
+        <classShapeMoniker Id="831cf88c-db72-4fd6-b3f7-58f51b6d1710" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
