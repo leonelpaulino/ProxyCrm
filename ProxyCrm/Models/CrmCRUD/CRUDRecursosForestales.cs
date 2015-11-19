@@ -47,24 +47,7 @@ namespace ProxyCrm.Models
                 {
                     CrmProxy db = new CrmProxy();
                     Entity newRecord = new Entity("");
-                    //CRMDataContext db = new CRMDataContext();
-                    //CrmContext db2 = new CrmContext();
-                    //DBViceministerioRecursosForestales recursosforestales = new DBViceministerioRecursosForestales();
-                    //recursosforestales.amb_viceministerio_recursos_forestalesId = CrearBase();
-                    //recursosforestales.amb_telefono = record.Solicitante.Telefono;
-                    //recursosforestales.amb_pies_tablar = record.PiesTablar;
-                    //recursosforestales.new_Puerto = record.Puerto;
-                    //recursosforestales.new_Barco_Vapor = record.Barco;
-                    //recursosforestales.new_Suplidor = record.Suplidor;
-                    //recursosforestales.new_Pais_de_Procedencia = record.PaisProcedencia;
-                    //recursosforestales.amb_cantidad = record.Cantidad;
-                    //var solicitante = db2.Solicitantes.ConsultarTodos(record.Solicitante.Cedula);
-                    //recursosforestales.amb_No_RNCId = solicitante.Id;
-                    //recursosforestales.new_Concepto_RF = record.Concepto;
-                    //recursosforestales.amb_solicitante = solicitante.NombreCompleto;
-                    //db.DBViceministerioRecursosForestales.InsertOnSubmit(recursosforestales);
-                    //db.SubmitChanges();
-                    //return recursosforestales.amb_viceministerio_recursos_forestalesId;
+                    return null;
 
 
                 }
